@@ -25,11 +25,11 @@
 		<span id="left"> < </span>
 		<span id="right"> > </span>
 		<ul class="nav" id="nav">
-			<li class="show">1</li>
-			<li>2</li>
-			<li>3</li>
-			<li>4</li>
-			<li>5</li>
+			<li class="show" style="color: red;">1</li>
+			<li style="color: red">2</li>
+			<li style="color: red">3</li>
+			<li style="color: red">4</li>
+			<li style="color: red">5</li>
 		</ul>
 	</div>
 </body>
@@ -45,6 +45,7 @@
 	var timer;
 	var ifMoving = false;
 	var p1 = document.getElementById("p1");
+	var lilist = document.getElementsByTagName("li");
 
 
 	function changenav(){
@@ -53,12 +54,18 @@
 		}
 		if (Index === 6) {
 			navlist[0].className = "show";//按钮背景色
+			lilist[0].style = "color:white";
+			
 		}
 		else if(Index === 0){
 			navlist[4].className = "show";//按钮背景色
+			lilist[4].style = "color:white";
+			
 		}
 		else{
 			navlist[Index - 1].className = "show";//按钮背景色
+			lilist[Index - 1].style = "color:white";
+
 		}
 
 	}//索引颜色
